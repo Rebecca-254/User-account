@@ -32,7 +32,32 @@ so i started by by setting up my project by by the name user-mgmt and create an 
 
 
 ---
+## 2. User Registration & Login
 
+This project includes a simple user authentication system using Django's built-in tools.
+
+### it What’s Implemented
+
+- **User Registration**
+  - Uses Django’s `UserCreationForm`
+  - Allows users to register with a username, email, and password
+  - Accessible at: `/accounts/register/`
+
+- **User Login**
+  - Uses Django’s built-in `LoginView`
+  - Allows registered users to log in securely
+  - Accessible at: `/accounts/login/`
+
+- **Redirection**
+  - Upon successful login, users are redirected to the home page (`/`)
+
+
+
+---
+
+
+
+---
 ## 📃 License
 
 For educational use only.
