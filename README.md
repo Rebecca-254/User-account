@@ -42,11 +42,16 @@ This project includes a simple user authentication system using Django's built-i
   - Uses Django’s `UserCreationForm`
   - Allows users to register with a username, email, and password
   - Accessible at: `/accounts/register/`
+   
+![Screenshot (11)](https://github.com/user-attachments/assets/06c59fed-ba87-4d7b-b1e1-f938f68cbcb4)
 
 - **User Login**
   - Uses Django’s built-in `LoginView`
   - Allows registered users to log in securely
   - Accessible at: `/accounts/login/`
+ 
+    ![Screenshot (12)](https://github.com/user-attachments/assets/d142d04c-e623-4f4e-a1d1-e48020dd53ef)
+
 
 - **Redirection**
   - Upon successful login, users are redirected to the home page (`/`)
