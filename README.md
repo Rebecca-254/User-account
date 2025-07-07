@@ -100,10 +100,13 @@ This project implements **email verification** as part of the user registration 
 
 ### 🛠️ Email Configuration (`settings.py`)
 
-```python
+python
 # Development
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 DEFAULT_FROM_EMAIL = 'noreply@example.com'
+
+![Screenshot (13)](https://github.com/user-attachments/assets/42e16e65-af7f-45cb-888d-bedfe92df20c)
 
 ##  Profile Management
 
@@ -113,7 +116,10 @@ DEFAULT_FROM_EMAIL = 'noreply@example.com'
 - Form is prefilled with current data for easy editing.
 - Upon successful update, a confirmation message is displayed.
 
-### 🔐 Change Password
+![Screenshot (15)](https://github.com/user-attachments/assets/29ceabc8-5f50-4d4e-a9d9-61ea3b3b2945)
+
+
+###  Change Password
 - Users can change their password while logged in.
 - Old password is required to ensure security.
 - New password must meet Django’s password validation rules.
@@ -121,12 +127,12 @@ DEFAULT_FROM_EMAIL = 'noreply@example.com'
   - The user is immediately logged in with the new password.
   - A success message is shown.
 
-### 🛠️ Tech Used
+###  Tech Used
 - Django’s built-in `UserChangeForm`, `PasswordChangeForm`, and authentication views.
 - `@login_required` decorator to restrict access to logged-in users only.
 
 
 ---
-## 📃 License
+##  License
 
 For educational use only.
