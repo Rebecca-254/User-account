@@ -105,6 +105,25 @@ This project implements **email verification** as part of the user registration 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'noreply@example.com'
 
+##  Profile Management
+
+###  View & Edit Profile
+- Logged-in users can view their personal profile page.
+- Users can update their information (e.g., username, email, etc.).
+- Form is prefilled with current data for easy editing.
+- Upon successful update, a confirmation message is displayed.
+
+### 🔐 Change Password
+- Users can change their password while logged in.
+- Old password is required to ensure security.
+- New password must meet Django’s password validation rules.
+- After changing the password:
+  - The user is immediately logged in with the new password.
+  - A success message is shown.
+
+### 🛠️ Tech Used
+- Django’s built-in `UserChangeForm`, `PasswordChangeForm`, and authentication views.
+- `@login_required` decorator to restrict access to logged-in users only.
 
 
 ---

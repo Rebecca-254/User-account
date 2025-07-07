@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegistrationForm
+from .forms import RegistrationForm, EditProfileForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.sites.shortcuts import get_current_site
@@ -56,3 +56,15 @@ def activate(request, uid, token):
         return redirect('login')
     else:
         return HttpResponse('Activation link is invalid!')
+
+@login_required
+def profile_view(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')  # name of the profile url
+    else:
+        form = EditProfileForm(instance=request.user)
+
+    return render(request, 'account/profile.html', {'form': form})
