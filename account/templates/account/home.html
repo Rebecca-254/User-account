@@ -1,2 +1,8 @@
-<h2>Welcome, {{ user.username }}!</h2>
-<p>You are logged in.</p>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome {{ user.username }}!</h2>
+    <p>This is the home page of your User Management system.</p>
+{% endblock %}

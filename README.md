@@ -59,6 +59,51 @@ This project includes a simple user authentication system using Django's built-i
 
 
 ---
+## 3. Email Verification (Custom Django Feature)
+## Description
+
+This project implements **email verification** as part of the user registration process. After a user registers, a confirmation email is sent with a verification link. Only verified users are allowed to log in and access their account.
+
+---
+
+###  How It Works
+
+1. **User Registers**
+   - User submits the registration form via `/account/register/`.
+   
+2. **Verification Email Sent**
+   - A unique verification link is sent to the user’s email using Django's `send_mail()` function and `default_token_generator`.
+
+3. **User Verifies Account**
+   - When the user clicks the link, their account is marked as verified.
+
+4. **Login Enabled**
+   - Only verified users can log in through `/account/login/`.
+
+---
+
+### Files Involved
+
+- `views.py`  
+  Handles registration, email sending, and token validation.
+  
+- `urls.py`  
+  Maps verification URLs like `verify/<uidb64>/<token>/`.
+
+- `register.html`  
+  Registration form.
+
+- `email_verification.html`  
+  Template used for sending email content (if HTML email is used).
+
+---
+
+### 🛠️ Email Configuration (`settings.py`)
+
+```python
+# Development
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'noreply@example.com'
 
 
 
