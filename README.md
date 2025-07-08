@@ -6,8 +6,7 @@ This is a Django project in progress. It will allow users to register, log in, v
 
 ##  Project Status
 
-🛠 Work in progress — started on **July 7, 2025**  
-✅ Deadline: **Today, 6PM**
+🛠 Work in progress — started on **July 7, 2025**
 
 ---
 
