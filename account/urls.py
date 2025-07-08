@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('activate/<uid>/<token>/', views.activate, name='activate'),
     path('profile/', views.profile_view, name='profile'),
+    path('edit_profile/', views.profile_view, name='edit_profile'),  # alias for POST test
     path('password_change/', auth_views.PasswordChangeView.as_view(template_name='account/change_password.html'), name='password_change'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='account/change_password_done.html'), name='password_change_done'),
 ]

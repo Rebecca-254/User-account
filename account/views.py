@@ -63,8 +63,7 @@ def profile_view(request):
         form = EditProfileForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            return redirect('profile')  # name of the profile url
+            return redirect('profile')
     else:
         form = EditProfileForm(instance=request.user)
-
     return render(request, 'account/profile.html', {'form': form})
