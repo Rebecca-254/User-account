@@ -18,13 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import LogoutView
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
-     path('', lambda request: redirect('account/')), 
-     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    path('', lambda request: redirect('account/')), 
+    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
 
 ]
 

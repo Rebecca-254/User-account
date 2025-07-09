@@ -1,6 +1,8 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from . import views
+from django.contrib.auth.views import LogoutView
+
 
 urlpatterns = [
     path('register/', views.register, name='register'),
@@ -11,4 +13,5 @@ urlpatterns = [
     path('edit_profile/', views.profile_view, name='edit_profile'),  # alias for POST test
     path('password_change/', auth_views.PasswordChangeView.as_view(), name='change_password'),
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
+    path('logout/', LogoutView.as_view(next_page='home'), name='logout')
 ]

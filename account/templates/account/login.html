@@ -1,6 +1,12 @@
+{% extends 'account/base.html' %}
+{% block content %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'account/style.css' %}">
+
     <title>Login</title>
 </head>
 <body>
@@ -12,3 +18,4 @@
     </form>
 </body>
 </html>
+{% endblock %}
