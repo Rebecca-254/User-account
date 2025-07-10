@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: user-management-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn user_mgmt.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: user_mgmt.settings
+      - key: PYTHON_VERSION
+        value: 3.11
