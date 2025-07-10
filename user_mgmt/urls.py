@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
     path('', lambda request: redirect('account/')), 
-    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    path('account/login/', auth_views.LoginView.as_view(), name='login'),
 
 ]
 
