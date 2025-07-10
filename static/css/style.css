@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: hsl(0, 17%, 71%);
+    background-color: #e3eefd; /* light blue */
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,13 +9,16 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #1565c0; /* blue */
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
-    background-color: #333;
+    background-color: #1976d2; /* blue */
     padding: 10px;
     text-align: center;
 }
@@ -24,6 +27,9 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav ul li {
@@ -32,30 +38,40 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #90caf9; /* lighter blue */
 }
 
 main {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #836bda;
+    background-color: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main > * {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: hsl(246, 74%, 43%);
+    background-color: #1565c0; /* blue */
+    color: #fff;
     margin-top: 40px;
 }

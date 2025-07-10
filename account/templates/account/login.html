@@ -1,21 +1,12 @@
-{% extends 'account/base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
 {% block content %}
-{% load static %}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'account/style.css' %}">
-
-    <title>Login</title>
-</head>
-<body>
     <h2>Login</h2>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Login</button>
     </form>
-</body>
-</html>
 {% endblock %}
